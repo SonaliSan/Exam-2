@@ -1,0 +1,83 @@
+// H.W
+/* instructions
+The following classes are used to represent a Block and a Row which is a group of Blocks.
+A Block is a very simple structure that has a width and a height. A Row is a collection of Blocks that is built using Block.
+
+The Block class has the following methods that you can use:
+public class Block
+{
+    //instance variables not shown
+    public Block() {//code not shown}
+    public int getWidth() {//code not shown}
+    public int getHeight() {//code not shown}
+    public void setWidth (int widith) {//code not shown}
+    public void setHeight(int height) {//code not shown}
+}
+
+You wiill be writing methods for the following Row class
+
+public class Row
+{
+    private ArrayList<Block> myBlocks; // contains all Block
+    public Row() {//code}
+    public int blockCount( int width, int height) {PART A} <<<<<<<<<<<< Part A
+    private Block tallestBlock()  {//part B } <<<<<<<<<<<<<<<<<<<<<<<<<<PART B
+    public void level() { part c} part C
+//other public member methods not shown
+}
+*/
+
+/*
+ part a.
+ Write the Row method blockCount(), as started below. blockCount() will count up how many Blocks there are in the Row that have a width and heiight equal to the supplied parameters.
+    
+    In writing blockCount() you may call any of the public methods of Class Block and any of the public or private methods of class Row. Assume that all of the liisted methods work as specified.
+
+    This method counts up the number of Blocks with a height and width that match the provided parameters.
+ */
+public int blockCount( int width, int height){
+int count = 0;
+for ( int i = 0; i< myBlocks.length; i++ )
+    if(myBlocks.get[i].getHeight()==height){
+        if(myBlocks.get[i].getWidth()==width)
+                     count++
+ 
+return count
+}
+
+/*part b
+Write the Row method tallestBlock() as stated below. tallestBlock() will go through the entire ArrayList of Block and return a reference to the Block that is the tallest. 
+The tallest Block would be the block with the greatest height.
+In writing tallestBlock() you may call any of the public methods of Class Block and any of the public or private methods of class Row. Assume that all of the liisted methods work as specified.
+
+This method will return a reference to the Block with the greatest height. myBlocks contains at least one Block
+*/
+private Block tallestBlock()
+{
+  int TallestBlock = 0;
+  int max = myBlocks.get[0];
+  for (int i = 0 ; i<myBlocks.length; i++)
+        if(myBlocks.get[i] > max)
+            max = myBlocks.get[i];
+                 TallestBlock = max;
+  
+            return TallestBlock;
+            
+   
+}
+
+
+
+
+
+/*
+Write the Row method level() as started below. level() will go through the entire ArrayList of Block and make sure that the entire row has the same height as the tallest Block in the Row.
+In writing level() you may call any of the public methods of class Block blah blah blah
+This method would set all Block to the same height as the tallest Block.
+*/
+public void level() 
+int Val = 0;
+for (int i = 0; i<myBlocks.length; i++){
+    myBlocks.get[i].getHeight = Row.tallestBlock();
+        
+}
